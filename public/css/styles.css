@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.new-button {
+  background-color: #5CACDE;
+  font-family: 'Pacifico', cursive;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: block;
+  text-align: center;
+  background-color: #3498DB;
+  border-radius: 4px;
+}
+
+.new-button:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #1588D0;
+}

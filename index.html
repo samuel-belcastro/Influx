@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Editor</title>
+
+    <link rel="stylesheet" type="text/css" href="public/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="public/css/editor.css">
+    <link rel="stylesheet" href="public/css/chrome-tabs.css">
+  </head>
+  <body>
+
+    <div class="chrome-tabs-shell">
+        <div class="chrome-tabs">
+            <div class="chrome-tab chrome-tab-current">
+                <!-- <div class="chrome-tab-favicon" style="background-image: url('demo/images/google-favicon.png')"></div> -->
+                <div class="chrome-tab-title">Calculator</div>
+                <div class="chrome-tab-close"></div>
+                <div class="chrome-tab-curves">
+                    <div class="chrome-tab-curves-left-shadow"></div>
+                    <div class="chrome-tab-curves-left-highlight"></div>
+                    <div class="chrome-tab-curves-left"></div>
+                    <div class="chrome-tab-curves-right-shadow"></div>
+                    <div class="chrome-tab-curves-right-highlight"></div>
+                    <div class="chrome-tab-curves-right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="chrome-shell-bottom-bar"></div>
+    </div>
+
+    <div id="Editor"></div>
+
+    <script>window.$ = window.jQuery = require('./public/js/jquery.min.js');</script>
+    <script src="public/coffee/app.js"></script>
+    <script src="public/js/jquery-ui.min.js"></script>
+    <script src="public/coffee/chrome-tabs.js"></script>
+    <script>
+        var $chromeTabsExampleShell = $('.chrome-tabs-shell')
+        chromeTabs.init({
+            $shell: $chromeTabsExampleShell,
+            minWidth: 45,
+            maxWidth: 160
+        });
+        $chromeTabsExampleShell.bind('chromeTabRender', function(){
+            var $currentTab = $chromeTabsExampleShell.find('.chrome-tab-current');
+            if ($currentTab.length && window['console'] && console.log) {
+                console.log('Current tab index', $currentTab.index(), 'title', $.trim($currentTab.text()), 'data', $currentTab.data('tabData').data);
+            }
+        });
+    </script>
+  </body>
+</html>

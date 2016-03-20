@@ -1,0 +1,54 @@
+body {
+	font-size: 20px;
+    height: 100%;
+}
+#Editor {
+	background-color: #fff;
+    width: 99%;
+    height: 60px;
+    font-family: monospace;
+    font-size: 1.3em;
+    border: 1px solid #bbb;
+    margin: 0;
+    text-shadow: none;
+    white-space: pre-wrap;
+    cursor: text;
+    padding-top: 25px;
+    padding-left: 5px;
+    font-size: 17px;
+}
+
+#Errorcontainer {
+    color: red;
+}
+
+span {
+	font-size: 20px;
+}
+
+span.cursor {
+    border-left: 1px solid #333;
+    position: absolute;
+    opacity: 1;
+}
+
+span.ide {
+	color: #2B228C;
+}
+
+span.num {
+	color: #6CA81C;
+}
+
+span.opr {
+
+}
+
+span.selected {
+    background-color: Highlight !important;
+    color: HighlightText !important;
+}
+
+span.enter {
+	color: rgb(220,220,220);
+}
