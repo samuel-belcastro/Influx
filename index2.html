@@ -90,7 +90,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
+                      <div id="influx">
 
+                      </div>
                     </div>
                 </div>
             </div>
@@ -106,8 +108,13 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="public/js/bootstrap.min.js"></script>
 
+    <script src="dist/influx.js"></script>
+
     <!-- Menu Toggle Script -->
     <script>
+    var influx = new Influx('influx');
+
+    console.log(influx.application)
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
